@@ -20,7 +20,7 @@
           <div class="post-meta">
             {{ if .Params.categories }}
               {{ range .Params.categories }}
-                <a href="/categories/{{ . | urlize }}" class="category-tag">{{ . }}</a>
+                <a href="{{ (print "categories/" (. | urlize)) | relURL }}" class="category-tag">{{ . }}</a>
               {{ end }}
             {{ end }}
             <span class="post-card-date">
@@ -52,14 +52,14 @@
           {{ if .Params.tags }}
             <div class="post-tags">
               {{ range .Params.tags }}
-                <a href="/tags/{{ . | urlize }}" class="tag-badge">#{{ . }}</a>
+                <a href="{{ (print "tags/" (. | urlize)) | relURL }}" class="tag-badge">#{{ . }}</a>
               {{ end }}
             </div>
           {{ end }}
 
           <!-- Author Box -->
           <div class="post-author-box">
-            <img src="{{ .Site.Params.profilePicture }}" alt="Avatar do Autor" class="post-author-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
+            <img src="{{ .Site.Params.profilePicture | relURL }}" alt="Avatar do Autor" class="post-author-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
             <div class="post-author-info">
               <div class="post-author-name">Escrito por {{ .Site.Params.author }}</div>
               <div class="post-author-bio">{{ .Site.Params.bio }}</div>

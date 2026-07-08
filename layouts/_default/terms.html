@@ -29,7 +29,7 @@
         {{ $type := .Data.Plural }}
         <div class="tags-cloud" style="gap: 15px;">
           {{ range .Data.Terms.Alphabetical }}
-            <a href="/{{ $type }}/{{ .Name | urlize }}" class="tag-badge" style="font-size: 1.05rem; padding: 10px 20px;">
+            <a href="{{ (print $type "/" (.Name | urlize)) | relURL }}" class="tag-badge" style="font-size: 1.05rem; padding: 10px 20px;">
               {{ .Name }} <span style="font-size: 0.8rem; opacity: 0.6; margin-left: 5px;">({{ .Count }})</span>
             </a>
           {{ end }}
@@ -41,7 +41,7 @@
     <aside class="sidebar">
       <!-- Profile Widget -->
       <div class="widget profile-widget">
-        <img src="{{ .Site.Params.profilePicture }}" alt="Avatar" class="profile-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
+        <img src="{{ .Site.Params.profilePicture | relURL }}" alt="Avatar" class="profile-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
         <h3 class="profile-name">{{ .Site.Params.author }}</h3>
         <div class="profile-title">Developer &amp; Writer</div>
         <p class="profile-bio">{{ .Site.Params.bio }}</p>

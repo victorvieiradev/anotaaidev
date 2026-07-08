@@ -37,7 +37,7 @@
           <div class="post-card-meta">
             {{ if $featured.Params.categories }}
               {{ $cat := index $featured.Params.categories 0 }}
-              <a href="/categories/{{ $cat | urlize }}" class="category-tag">{{ $cat }}</a>
+              <a href="{{ (print "categories/" ($cat | urlize)) | relURL }}" class="category-tag">{{ $cat }}</a>
             {{ end }}
             <span class="post-card-date">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -76,7 +76,7 @@
                 <div class="post-card-meta">
                   {{ if .Params.categories }}
                     {{ $cat := index .Params.categories 0 }}
-                    <a href="/categories/{{ $cat | urlize }}" class="category-tag">{{ $cat }}</a>
+                    <a href="{{ (print "categories/" ($cat | urlize)) | relURL }}" class="category-tag">{{ $cat }}</a>
                   {{ end }}
                   <span class="post-card-date">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -124,7 +124,7 @@
       
       <!-- Profile Widget -->
       <div class="widget profile-widget">
-        <img src="{{ .Site.Params.profilePicture }}" alt="Avatar" class="profile-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
+        <img src="{{ .Site.Params.profilePicture | relURL }}" alt="Avatar" class="profile-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
         <h3 class="profile-name">{{ .Site.Params.author }}</h3>
         <div class="profile-title">Developer &amp; Writer</div>
         <p class="profile-bio">{{ .Site.Params.bio }}</p>
@@ -155,7 +155,7 @@
           <ul class="categories-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
               <li class="category-item">
-                <a href="/categories/{{ $name | urlize }}">{{ $name | title }}</a>
+                <a href="{{ (print "categories/" ($name | urlize)) | relURL }}">{{ $name | title }}</a>
                 <span class="category-count">{{ $taxonomy.Count }}</span>
               </li>
             {{ end }}
@@ -169,7 +169,7 @@
           <h3 class="widget-title">Tags</h3>
           <div class="tags-cloud">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-              <a href="/tags/{{ $name | urlize }}" class="tag-badge">{{ $name }}</a>
+              <a href="{{ (print "tags/" ($name | urlize)) | relURL }}" class="tag-badge">{{ $name }}</a>
             {{ end }}
           </div>
         </div>

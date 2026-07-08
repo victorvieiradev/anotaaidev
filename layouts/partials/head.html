@@ -30,4 +30,8 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
 <!-- Scripts -->
-<script src="/js/main.js" defer></script>
+<script>
+  window.siteBaseUrl = "{{ "" | relURL }}";
+</script>
+<script src="{{ "js/main.js" | relURL }}" defer></script>
+

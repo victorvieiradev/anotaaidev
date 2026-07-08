@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!searchIndex) {
         try {
           searchResults.innerHTML = '<div class="search-no-results">Carregando índice de busca...</div>';
-          const response = await fetch('/index.json');
+          const response = await fetch(window.siteBaseUrl + 'index.json');
           searchIndex = await response.json();
           searchResults.innerHTML = '<div class="search-no-results">Digite algo para buscar...</div>';
         } catch (err) {
