@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}" data-theme="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+
+  {{ partial "header.html" . }}
+
+  <!-- Title Banner -->
+  <section class="hero" style="padding: 50px 0 30px 0;">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <h1 style="font-size: 2rem;">
+        Lista de <span>{{ .Title }}</span>
+      </h1>
+      <p style="font-size: 1rem; margin-bottom: 0;">Navegue pelos artigos através de tópicos</p>
+    </div>
+  </section>
+
+  <!-- Main Content Grid -->
+  <main class="container layout-grid">
+    
+    <!-- Left Column: Terms Cloud -->
+    <div class="main-content">
+      <div class="widget" style="padding: 40px;">
+        <h2 class="widget-title" style="font-size: 1.4rem; margin-bottom: 30px;">Todos os termos de {{ .Title | lower }}</h2>
+        
+        {{ $type := .Data.Plural }}
+        <div class="tags-cloud" style="gap: 15px;">
+          {{ range .Data.Terms.Alphabetical }}
+            <a href="/{{ $type }}/{{ .Name | urlize }}" class="tag-badge" style="font-size: 1.05rem; padding: 10px 20px;">
+              {{ .Name }} <span style="font-size: 0.8rem; opacity: 0.6; margin-left: 5px;">({{ .Count }})</span>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Sidebar -->
+    <aside class="sidebar">
+      <!-- Profile Widget -->
+      <div class="widget profile-widget">
+        <img src="{{ .Site.Params.profilePicture }}" alt="Avatar" class="profile-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=anotaaidev&backgroundColor=09090b'">
+        <h3 class="profile-name">{{ .Site.Params.author }}</h3>
+        <div class="profile-title">Developer &amp; Writer</div>
+        <p class="profile-bio">{{ .Site.Params.bio }}</p>
+      </div>
+    </aside>
+  </main>
+
+  {{ partial "footer.html" . }}
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+baseURL = 'http://localhost:1313/'
+locale = 'pt-br'
+title = 'Anota Aí, Dev!'
+theme = [] # Using custom layouts directly at root
+
+[params]
+  description = 'Anotações de um desenvolvedor sobre tecnologia, programação, arquitetura e carreira.'
+  author = 'AnotaAíDev'
+  github = 'https://github.com/'
+  youtube = 'https://youtube.com/'
+  linkedin = 'https://linkedin.com/'
+  twitter = 'https://twitter.com/'
+  
+  # Custom profile details (Akita style bio)
+  bio = 'Desenvolvedor de software apaixonado por arquitetura limpa, Linux, performance e boas práticas de desenvolvimento. Este blog é o backup do meu cérebro.'
+  profilePicture = '/images/profile.jpg'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allow HTML in markdown
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = 'monokai' # Dark tech syntax highlight style
+
+[menu]
+  [[menu.main]]
+    name = 'Início'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Artigos'
+    url = '/posts/'
+    weight = 2
+  [[menu.main]]
+    name = 'Categorias'
+    url = '/categories/'
+    weight = 3
+  [[menu.main]]
+    name = 'Tags'
+    url = '/tags/'
+    weight = 4
+  [[menu.main]]
+    name = 'Sobre'
+    url = '/sobre/'
+    weight = 5
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
