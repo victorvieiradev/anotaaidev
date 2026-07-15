@@ -6,7 +6,7 @@ theme = [] # Using custom layouts directly at root
 [params]
   description = 'Anotações de um desenvolvedor sobre tecnologia, programação, arquitetura e carreira.'
   author = 'AnotaAíDev'
-  github = 'https://github.com/'
+  github = 'https://github.com/victorvieiradev'
   youtube = 'https://youtube.com/'
   linkedin = 'https://linkedin.com/'
   twitter = 'https://twitter.com/'
