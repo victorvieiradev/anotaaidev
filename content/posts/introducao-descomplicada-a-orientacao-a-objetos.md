@@ -1,6 +1,6 @@
 ---
 title: "Orientação a Objetos Descomplicada: O Guia Definitivo para Iniciantes"
-date: 2026-07-17T21:25:00-03:00
+date: 2026-07-17T21:00:00-03:00
 description: "Entenda o que é Orientação a Objetos e seus 4 pilares fundamentais (Abstração, Encapsulamento, Herança e Polimorfismo) de forma simples, com exemplos do mundo real e códigos práticos em Kotlin."
 categories: ["Desenvolvimento", "Programação"]
 tags: ["Orientacao a Objetos", "POO", "Kotlin", "Iniciantes", "Boas Praticas"]
