@@ -23,18 +23,18 @@ Para resolver isso, os cientistas da computação pensaram: *E se estruturarmos 
 
 Vamos ver como três autores renomados e fundamentais definem essa ideia:
 
-### 1. Alan Kay: A Metáfora Biológica
+### A Metáfora Biológica de Alan Kay
 **Alan Kay**, o cientista que cunhou o termo "Orientação a Objetos", não pensava em código rígido ou tabelas de banco de dados. Ele se inspirou na **biologia**. Para ele, um sistema orientado a objetos deve funcionar como um corpo humano cheio de **células**.
 * Cada célula (objeto) tem sua própria vida, guarda suas informações internas e é totalmente independente.
 * As células não mexem diretamente dentro umas das outras. Em vez disso, elas se comunicam enviando **mensagens** (sinais químicos). No código, chamamos essas mensagens de **métodos** (funções).
 
-### 2. Grady Booch: Estado, Comportamento e Identidade
+### Estado, Comportamento e Identidade por Grady Booch
 **Grady Booch**, um dos criadores da UML (a linguagem de modelagem de sistemas) e autor de livros clássicos sobre o tema, definiu que um **Objeto** é qualquer entidade tangível do mundo real que possui três características fundamentais:
 * **Estado:** As informações que ele guarda (ex: o nível de bateria de um celular).
 * **Comportamento:** O que ele sabe fazer (ex: fazer uma ligação, tirar uma foto).
 * **Identidade:** O que o torna único no mundo, mesmo que existam outros iguais (ex: o número de série ou o número do chassi).
 
-### 3. Robert C. Martin (Uncle Bob): Controle de Dependências
+### O Controle de Dependências de Robert C. Martin
 O famoso autor de *Código Limpo* (**Clean Code**), **Robert C. Martin**, traz uma visão muito pragmática: a orientação a objetos não é só modelar o mundo real, mas sim uma forma disciplinada de organizar o código que nos dá o poder de usar o **Polimorfismo** para controlar as dependências do sistema. Isso evita que uma pequena mudança em uma parte do código quebre o sistema inteiro.
 
 ---
@@ -78,7 +78,7 @@ Agora que você já entendeu o que é um objeto, vamos conhecer os 4 pilares que
 
 ---
 
-### 1. Abstração
+### Abstração
 > *"Focar no que é essencial para o sistema e ignorar os detalhes irrelevantes."* — Inspirado em Grady Booch
 
 **O exemplo do mundo real:** 
@@ -111,7 +111,7 @@ class Pix : MeioDePagamento {
 
 ---
 
-### 2. Encapsulamento
+### Encapsulamento
 > *"A proteção e isolamento do estado interno de um objeto."* — Inspirado em Alan Kay
 
 **O exemplo do mundo real:**
@@ -167,7 +167,7 @@ fun main() {
 
 ---
 
-### 3. Herança
+### Herança
 > *"A capacidade de criar novos moldes a partir de moldes já existentes, reaproveitando código."* — Conceito geral de evolução de tipos
 
 **O exemplo do mundo real:**
@@ -203,7 +203,7 @@ fun main() {
 
 ---
 
-### 4. Polimorfismo
+### Polimorfismo
 > *"A capacidade de um mesmo comportamento ser executado de formas diferentes por objetos distintos."* — Inspirado no controle de dependências de Robert C. Martin
 
 **O exemplo do mundo real:**
