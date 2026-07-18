@@ -78,7 +78,7 @@ Agora que você já entendeu o que é um objeto, vamos conhecer os 4 pilares que
 
 ---
 
-### Abstração
+## Abstração
 > *"Focar no que é essencial para o sistema e ignorar os detalhes irrelevantes."* — Inspirado em Grady Booch
 
 **O exemplo do mundo real:** 
@@ -86,7 +86,7 @@ Quando você vai dirigir um carro, você precisa interagir com o volante, o acel
 
 No desenvolvimento de software é a mesma coisa. Se você está criando um aplicativo de e-commerce, o objeto `Cliente` precisa apenas de nome, e-mail e endereço. Você não precisa salvar o tipo sanguíneo ou a altura do cliente, pois essas informações são irrelevantes para o contexto do negócio.
 
-#### Abstração em Kotlin:
+### Abstração em Kotlin:
 Usamos **Interfaces** ou **Classes Abstratas** para definir quais comportamentos são importantes sem nos preocuparmos com os detalhes de como eles acontecem internamente.
 
 ```kotlin
@@ -111,7 +111,7 @@ class Pix : MeioDePagamento {
 
 ---
 
-### Encapsulamento
+## Encapsulamento
 > *"A proteção e isolamento do estado interno de um objeto."* — Inspirado em Alan Kay
 
 **O exemplo do mundo real:**
@@ -119,7 +119,7 @@ Imagine uma **Máquina de Café Expresso**. Ela tem água quente sob alta press�
 
 No código, o encapsulamento serve para proteger as variáveis (o estado) de um objeto de serem alteradas incorretamente por outras partes do programa. Fazemos isso escondendo as variáveis e permitindo o acesso apenas através de métodos controlados.
 
-#### Encapsulamento em Kotlin:
+### Encapsulamento em Kotlin:
 Usamos palavras-chave como `private` para esconder os dados e expomos apenas o que for seguro.
 
 ```kotlin
@@ -167,14 +167,14 @@ fun main() {
 
 ---
 
-### Herança
+## Herança
 > *"A capacidade de criar novos moldes a partir de moldes já existentes, reaproveitando código."* — Conceito geral de evolução de tipos
 
 **O exemplo do mundo real:**
 Pense na categoria de **Animais**. Todo animal tem características genéricas: respira, come e dorme. Um **Cachorro** é um animal, assim como um **Gato** também é.
 Em vez de redefinirmos que o cachorro come, dorme e respira, e depois redefinirmos tudo de novo para o gato, nós dizemos que o `Cachorro` e o `Gato` **herdam** as características de `Animal`. O cachorro apenas adiciona o comportamento específico de *latir* e o gato de *miar*.
 
-#### Herança em Kotlin:
+### Herança em Kotlin:
 Em Kotlin, por padrão, as classes são fechadas para herança (segurança do código). Para permitir que uma classe seja herdada, precisamos marcá-la com a palavra `open`.
 
 ```kotlin
@@ -203,7 +203,7 @@ fun main() {
 
 ---
 
-### Polimorfismo
+## Polimorfismo
 > *"A capacidade de um mesmo comportamento ser executado de formas diferentes por objetos distintos."* — Inspirado no controle de dependências de Robert C. Martin
 
 **O exemplo do mundo real:**
@@ -214,7 +214,7 @@ Pense no botão **"Ligar"** ou **"Play"** (Iniciar).
 
 A ação física de apertar o botão é exatamente a mesma, mas a resposta de cada aparelho é completamente diferente dependendo do objeto que você está usando. Isso é o **Polimorfismo** (muitas formas para o mesmo comportamento).
 
-#### Polimorfismo em Kotlin:
+### Polimorfismo em Kotlin:
 No código, isso acontece quando temos uma classe base ou interface comum e várias classes filhas que redefinem (sobrescrevem) um mesmo método usando a palavra-chave `override`.
 
 ```kotlin
