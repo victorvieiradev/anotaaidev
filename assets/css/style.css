@@ -655,7 +655,7 @@ header {
 
 @media (min-width: 1100px) {
   .post-layout {
-    grid-template-columns: 8fr 3fr;
+    grid-template-columns: minmax(0, 8fr) minmax(0, 3fr);
   }
 }
 
@@ -664,6 +664,7 @@ header {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 25px;
+  min-width: 0;
 }
 
 @media (min-width: 768px) {
