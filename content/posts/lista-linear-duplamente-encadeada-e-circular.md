@@ -1,6 +1,6 @@
 ---
 title: "Lista Linear Duplamente Encadeada e Lista Circular: Conceitos, Manipulação e Prática em Python"
-date: 2026-07-23T23:05:00-03:00
+date: 2026-07-23T12:00:00-03:00
 description: "Aprenda tudo sobre Lista Linear Duplamente Encadeada e Lista Circular de forma simples, didática e visual. Entenda ponteiros duplos, navegação nos dois sentidos, inserção, remoção, troca de elementos, diferenças para arrays e listas simples, com analogias do mundo real e código Python 100% em português."
 categories: ["Estruturas de Dados", "Algoritmos"]
 tags: ["Lista Linear", "Lista Duplamente Encadeada", "Lista Circular", "Doubly Linked List", "Estruturas de Dados", "Python", "Iniciantes"]
