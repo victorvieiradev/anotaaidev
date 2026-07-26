@@ -2,7 +2,7 @@
 title: "Revisão Rápida e Descomplicada: Tudo Sobre Listas Lineares (Sequencial, Encadeada, Dupla e Circular)"
 date: 2026-07-26T11:55:00-03:00
 description: "Um guia prático e direto para revisar e comparar as 4 principais estruturas de listas lineares: Sequencial, Encadeada, Duplamente Encadeada e Circular."
-categories: ["Estrutura de Dados", "Desenvolvimento"]
+categories: ["Estruturas de Dados", "Desenvolvimento"]
 tags: ["Estruturas de Dados", "Arrays", "LinkedList", "Algoritmos", "Clean Code"]
 draft: false
 ---
