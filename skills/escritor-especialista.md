@@ -83,6 +83,8 @@ Para manter a organização no Hugo, selecione de 1 a 2 categorias da lista ofic
 - `"Linux & Terminal"`
 - `"Paradigmas de Programação"`
 
+> 💡 **Observação sobre Novas Categorias**: Se o assunto abordado no novo artigo for inédito e não se encaixar adequadamente em nenhuma das categorias existentes acima, você **pode e deve criar uma nova categoria** descritiva, relevante e padronizada (em Title Case), adicionando-a ao frontmatter do post.
+
 ---
 
 ## 🚀 5. Checklist de Qualidade do Post
@@ -93,5 +95,5 @@ Para manter a organização no Hugo, selecione de 1 a 2 categorias da lista ofic
 - [ ] Para algoritmos/estruturas, há uma tabela clara de complexidade (Big-O)?
 - [ ] O artigo cita ou se baseia em autores renomados quando aplicável?
 - [ ] Há links internos direcionando para outros artigos relacionados do blog?
-- [ ] As categorias do frontmatter pertencem à lista oficial padronizada do blog?
+- [ ] As categorias do frontmatter pertencem à lista oficial padronizada do blog (ou uma nova foi criada adequadamente)?
 - [ ] O frontmatter do Hugo foi preenchido corretamente com data atual e slug adequado?
