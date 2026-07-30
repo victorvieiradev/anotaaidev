@@ -9,7 +9,7 @@ draft: false
 
 Imagine que estamos jogando um clássico jogo de infância: **"Adivinhe o número entre 1 e 100"**.
 
-Se você tentar chutar número por número — `1`, `2`, `3`, `4`... —, no pior cenário você fará **100 palpites**. Se o jogo fosse de 1 a 1 milhão, você poderia precisar de **1 milhão de chutes**! Como vimos no artigo sobre [Busca Linear e Notação Big O](/posts/busca-linear-e-complexidade-big-o/), essa abordagem sequencial custa **O(n)**.
+Se você tentar chutar número por número — `1`, `2`, `3`, `4`... —, no pior cenário você fará **100 palpites**. Se o jogo fosse de 1 a 1 milhão, você poderia precisar de **1 milhão de chutes**! Como vimos no artigo sobre [Busca Linear e Notação Big O]({{< ref "busca-linear-e-complexidade-big-o.md" >}}), essa abordagem sequencial custa **O(n)**.
 
 Mas qual é a estratégia inteligente que qualquer pessoa usa naturalmente? 
 
@@ -106,7 +106,7 @@ Enquanto a Busca Linear em 1 bilhão de registros exigiria 1 bilhão de iteraç�
 
 ## 💻 Implementação Prática em Python
 
-Vamos analisar duas formas limpas de implementar a Busca Binária em Python: a **Iterativa** (usando laço `while`) e a **Recursiva** (aplicando o conceito do nosso artigo sobre [Recursão Descomplicada em Python](/posts/recursao-descomplicada-em-python/)).
+Vamos analisar duas formas limpas de implementar a Busca Binária em Python: a **Iterativa** (usando laço `while`) e a **Recursiva** (aplicando o conceito do nosso artigo sobre [Recursão Descomplicada em Python]({{< ref "recursao-descomplicada-em-python.md" >}})).
 
 ### 1. Abordagem Iterativa (Laço `while`)
 
@@ -214,11 +214,11 @@ print(f"Resultado Recursivo: Índice {resultado_recursivo}")
 
 ### ✅ Use a Busca Binária se:
 1. A sua lista de dados **já está ordenada** ou é ordenada apenas uma vez e consultada frequentemente.
-2. O acesso aos elementos por índice em tempo constante **O(1)** é garantido (como em [Arrays / Vetores](/posts/lista-linear-sequencial-arrays-e-vetores/)).
+2. O acesso aos elementos por índice em tempo constante **O(1)** é garantido (como em [Arrays / Vetores]({{< ref "lista-linear-sequencial-arrays-e-vetores.md" >}})).
 
 ### ❌ NÃO use a Busca Binária se:
 1. **A lista não está ordenada e mudará a todo momento**: Ordenar uma lista custa no mínimo **O(n log n)**. Ordenar apenas para fazer uma única busca sairá mais caro do que uma Busca Linear **O(n)**!
-2. **Sua estrutura é uma Lista Encadeada**: Em uma [Lista Encadeada Simples](/posts/lista-linear-ligada-encadeada-conceitos-e-pratica/), você não consegue acessar o meio em **O(1)**.
+2. **Sua estrutura é uma Lista Encadeada**: Em uma [Lista Encadeada Simples]({{< ref "lista-linear-ligada-encadeada-conceitos-e-pratica.md" >}}), você não consegue acessar o meio em **O(1)**.
 
 ---
 

@@ -66,7 +66,8 @@ Todo post criado para o blog deve seguir rigorosamente este roteiro didático:
    - Adicione 1 ou 2 pequenas questões/exercícios práticos no final do post para testar a fixação do leitor.
 
 8. **Links Internos (Cross-Linking) & Conclusão**:
-   - Referencie e crie links para outros artigos relevantes já publicados no blog (ex: *"Como vimos no artigo sobre Listas Sequenciais..."*).
+   - Referencie e crie links para outros artigos relevantes já publicados no blog.
+   - 🚨 **REGRA DE OURO PARA LINKS INTERNOS**: **NUNCA** use links brutos/estáticos em Markdown (ex: `[Texto](/posts/slug/)`). Utilize **OBRIGATORIAMENTE** o shortcode nativo do Hugo: `[Texto]({{< ref "slug-do-post.md" >}})`. Isso previne URLs quebradas (404) em diferentes ambientes e permite que o Hugo valide a integridade do link durante o build.
    - Um fechamento motivador reforçando os pontos-chave e convidando o leitor a interagir.
 
 ---
@@ -116,5 +117,5 @@ Para manter a organização no Hugo, selecione de 1 a 2 categorias da lista ofic
 - [ ] Para algoritmos/estruturas, há uma tabela clara de complexidade (Big-O limpo e acessível para leitores de tela **O(...)**)?
 - [ ] O artigo cita ou se baseia em autores renomados quando aplicável?
 - [ ] Há a seção final de desafio prático de fixação?
-- [ ] Há links internos direcionando para outros artigos relacionados do blog?
+- [ ] Há links internos direcionando para outros artigos relacionados usando o shortcode `{{< ref "arquivo.md" >}}`?
 - [ ] O slug do arquivo e o frontmatter do Hugo seguem as boas práticas de SEO?
