@@ -9,7 +9,7 @@ draft: false
 
 Imagine que estamos jogando um clássico jogo de infância: **"Adivinhe o número entre 1 e 100"**.
 
-Se você tentar chutar número por número — `1`, `2`, `3`, `4`... —, no pior cenário você fará **100 palpites**. Se o jogo fosse de 1 a 1 milhão, você poderia precisar de **1 milhão de chutes**! Como vimos no artigo sobre [Busca Linear e Notação Big O](/posts/busca-linear-e-complexidade-big-o/), essa abordagem sequencial custa $\mathcal{O}(n)$.
+Se você tentar chutar número por número — `1`, `2`, `3`, `4`... —, no pior cenário você fará **100 palpites**. Se o jogo fosse de 1 a 1 milhão, você poderia precisar de **1 milhão de chutes**! Como vimos no artigo sobre [Busca Linear e Notação Big O](/posts/busca-linear-e-complexidade-big-o/), essa abordagem sequencial custa **O(n)**.
 
 Mas qual é a estratégia inteligente que qualquer pessoa usa naturalmente? 
 
@@ -19,7 +19,7 @@ Se a resposta for *"é maior que 50"*, você acabou de descartar metade de todas
 
 Com essa estratégia simples, você descobre qualquer número entre 1 e 100 em no máximo **7 palpites**. Se o intervalo fosse de **1 milhão de números**, você precisaria de no máximo **20 palpites**!
 
-Parabéns! Essa é a mágica do algoritmo de **Busca Binária (*Binary Search*)** e da sua impressionante eficiência $\mathcal{O}(\log n)$.
+Parabéns! Essa é a mágica do algoritmo de **Busca Binária (*Binary Search*)** e da sua impressionante eficiência **O(log n)**.
 
 ---
 
@@ -82,17 +82,17 @@ Se os elementos estivessem fora de ordem (ex: `[56, 2, 23, 8, 16]`), olhar para 
 
 > 📝 **Anota Aí no Caderno! (Cola para a Prova)**
 > 
-> **Busca Binária**: Algoritmo de busca rápida que **divide o intervalo ao meio a cada passo** ($\mathcal{O}(\log n)$). Funciona **exclusivamente em coleções ordenadas**, reduzindo 1 milhão de itens para no máximo 20 comparações!
+> **Busca Binária**: Algoritmo de busca rápida que **divide o intervalo ao meio a cada passo** (**O(log n)**). Funciona **exclusivamente em coleções ordenadas**, reduzindo 1 milhão de itens para no máximo 20 comparações!
 
 ---
 
-## 📐 Por que $\mathcal{O}(\log n)$ é TÃO Rápido?
+## 📐 Por que O(log n) é TÃO Rápido?
 
-A notação $\mathcal{O}(\log n)$ representa um crescimento **logarítmico** (na base 2). Isso significa que, toda vez que dobrarmos o tamanho da nossa lista de dados, adicionamos apenas **uma operação a mais** ao tempo de execução!
+A notação **O(log n)** representa um crescimento **logarítmico** (na base 2). Isso significa que, toda vez que dobrarmos o tamanho da nossa lista de dados, adicionamos apenas **uma operação a mais** ao tempo de execução!
 
-Veja a comparação entre a Busca Linear $\mathcal{O}(n)$ e a Busca Binária $\mathcal{O}(\log n)$ para o **pior caso**:
+Veja a comparação entre a Busca Linear **O(n)** e a Busca Binária **O(log n)** para o **pior caso**:
 
-| Quantidade de Elementos ($n$) | Busca Linear $\mathcal{O}(n)$ | Busca Binária $\mathcal{O}(\log_2 n)$ |
+| Quantidade de Elementos ($n$) | Busca Linear **O(n)** | Busca Binária **O(log n)** |
 | :--- | :---: | :---: |
 | **10** elementos | 10 comparações | **4** comparações |
 | **100** elementos | 100 comparações | **7** comparações |
@@ -202,11 +202,11 @@ print(f"Resultado Recursivo: Índice {resultado_recursivo}")
 
 | Cenário | Complexidade de Tempo | Complexidade de Memória (Espaço) |
 | :--- | :---: | :---: |
-| **Melhor Caso** | $\mathcal{O}(1)$ | $\mathcal{O}(1)$ |
-| **Caso Médio** | $\mathcal{O}(\log n)$ | $\mathcal{O}(1)$ iterativo / $\mathcal{O}(\log n)$ recursivo |
-| **Pior Caso** | $\mathcal{O}(\log n)$ | $\mathcal{O}(1)$ iterativo / $\mathcal{O}(\log n)$ recursivo |
+| **Melhor Caso** | **O(1)** | **O(1)** |
+| **Caso Médio** | **O(log n)** | **O(1)** iterativo / **O(log n)** recursivo |
+| **Pior Caso** | **O(log n)** | **O(1)** iterativo / **O(log n)** recursivo |
 
-> **Nota sobre Memória**: A versão **iterativa** utiliza espaço constante $\mathcal{O}(1)$ (só mantém dois ponteiros inteiros). A versão **recursiva** gasta $\mathcal{O}(\log n)$ de memória na pilha de chamadas (*call stack*).
+> **Nota sobre Memória**: A versão **iterativa** utiliza espaço constante **O(1)** (só mantém dois ponteiros inteiros). A versão **recursiva** gasta **O(log n)** de memória na pilha de chamadas (*call stack*).
 
 ---
 
@@ -214,11 +214,11 @@ print(f"Resultado Recursivo: Índice {resultado_recursivo}")
 
 ### ✅ Use a Busca Binária se:
 1. A sua lista de dados **já está ordenada** ou é ordenada apenas uma vez e consultada frequentemente.
-2. O acesso aos elementos por índice em tempo constante $\mathcal{O}(1)$ é garantido (como em [Arrays / Vetores](/posts/lista-linear-sequencial-arrays-e-vetores/)).
+2. O acesso aos elementos por índice em tempo constante **O(1)** é garantido (como em [Arrays / Vetores](/posts/lista-linear-sequencial-arrays-e-vetores/)).
 
 ### ❌ NÃO use a Busca Binária se:
-1. **A lista não está ordenada e mudará a todo momento**: Ordenar uma lista custa no mínimo $\mathcal{O}(n \log n)$. Ordenar apenas para fazer uma única busca sairá mais caro do que uma Busca Linear $\mathcal{O}(n)$!
-2. **Sua estrutura é uma Lista Encadeada**: Em uma [Lista Encadeada Simples](/posts/lista-linear-ligada-encadeada-conceitos-e-pratica/), você não consegue acessar o meio em $\mathcal{O}(1)$.
+1. **A lista não está ordenada e mudará a todo momento**: Ordenar uma lista custa no mínimo **O(n log n)**. Ordenar apenas para fazer uma única busca sairá mais caro do que uma Busca Linear **O(n)**!
+2. **Sua estrutura é uma Lista Encadeada**: Em uma [Lista Encadeada Simples](/posts/lista-linear-ligada-encadeada-conceitos-e-pratica/), você não consegue acessar o meio em **O(1)**.
 
 ---
 
@@ -236,8 +236,8 @@ print(f"Resultado Recursivo: Índice {resultado_recursivo}")
 
 A Busca Binária em arrays é excelente, mas tem um grande dilema: **como manter os dados ordenados dinamicamente sem pagar um preço alto nas inserções?**
 
-Em um Array, quando inserimos um novo elemento no meio para mantê-lo ordenado, precisamos empurrar todos os elementos seguintes ($\mathcal{O}(n)$).
+Em um Array, quando inserimos um novo elemento no meio para mantê-lo ordenado, precisamos empurrar todos os elementos seguintes (**O(n)**).
 
-Para resolver essa limitação e unir a busca logarítmica $\mathcal{O}(\log n)$ com inserções dinâmicas, surgem as **Árvores Binárias de Busca (BST - *Binary Search Trees*)**! 🌲
+Para resolver essa limitação e unir a busca logarítmica **O(log n)** com inserções dinâmicas, surgem as **Árvores Binárias de Busca (BST - *Binary Search Trees*)**! 🌲
 
 Se este resumo te ajudou, compartilhe com seus colegas desenvolvedores e continue acompanhando o **Anota Aí, Dev!** 🚀

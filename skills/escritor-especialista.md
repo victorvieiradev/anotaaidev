@@ -49,7 +49,7 @@ Todo post criado para o blog deve seguir rigorosamente este roteiro didático:
    > 📝 **Anota Aí no Caderno! (Cola para a Prova)**
    > 
    > **[Nome do Conceito]**: [Frase de resumo extremamente direta e memorável].
-   > *Exemplo*: "A **Busca Binária** divide o problema pela metade a cada passo ($\mathcal{O}(\log n)$), mas exige obrigatoriamente que a lista esteja **ordenada**."
+   > *Exemplo*: "A **Busca Binária** divide o problema pela metade a cada passo (**O(log n)**), mas exige obrigatoriamente que a lista esteja **ordenada**."
    ```
 
 5. **Exemplo Prático e Código Limpo (100% em PT-BR & Idiomático)**:
@@ -59,7 +59,7 @@ Todo post criado para o blog deve seguir rigorosamente este roteiro didático:
    - Quando aplicável, mostre o "Antes" (código ruim/problemático) e o "Depois" (código correto/otimizado).
 
 6. **Aplicações no Dia a Dia, Tabela de Complexidade (Big-O) e Trade-offs**:
-   - Para posts sobre Algoritmos e Estruturas de Dados, inclua obrigatoriamente uma **tabela comparativa de complexidade (Big-O de Tempo e Memória)** utilizando sintaxe LaTeX (ex: $\mathcal{O}(\log n)$).
+   - Para posts sobre Algoritmos e Estruturas de Dados, inclua obrigatoriamente uma **tabela comparativa de complexidade (Big-O de Tempo e Memória)** utilizando notação em texto/código limpa e 100% acessível para leitores de tela (ex: **O(n)**, **O(log n)**, **O(1)**). Nunca utilize marcadores de fórmulas pesados como `\mathcal` ou cifrões desnecessários que geram ruído para leitores de tela.
    - Explique quando usar e quando NÃO usar (evitando "bala de prata").
 
 7. **🧩 Desafio Rápido de Fixação ("Anota Aí e Pratique!")**:
@@ -113,7 +113,7 @@ Para manter a organização no Hugo, selecione de 1 a 2 categorias da lista ofic
 - [ ] Há o bloco de destaque **📝 "Anota Aí no Caderno! (Cola para a Prova)"** com resumo curto e direto?
 - [ ] O código fonte usa nomes de variáveis, métodos e comentários 100% em Português (PT-BR) e é idiomático?
 - [ ] Os trechos de código exibem o output/resultado esperado?
-- [ ] Para algoritmos/estruturas, há uma tabela clara de complexidade (Big-O em LaTeX $\mathcal{O}(\dots)$)?
+- [ ] Para algoritmos/estruturas, há uma tabela clara de complexidade (Big-O limpo e acessível para leitores de tela **O(...)**)?
 - [ ] O artigo cita ou se baseia em autores renomados quando aplicável?
 - [ ] Há a seção final de desafio prático de fixação?
 - [ ] Há links internos direcionando para outros artigos relacionados do blog?
