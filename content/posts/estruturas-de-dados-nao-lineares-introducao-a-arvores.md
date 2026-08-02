@@ -9,7 +9,10 @@ draft: false
 
 Se você acompanhou nossos artigos anteriores sobre [Arrays e Vetores]({{< ref "lista-linear-sequencial-arrays-e-vetores.md" >}}), [Listas Encadeadas]({{< ref "lista-linear-ligada-encadeada-conceitos-e-pratica.md" >}}) e [Filas e Pilhas]({{< ref "filas-pilhas-e-deques-sua-relacao-com-listas.md" >}}), você já domina o mundo das **estruturas de dados lineares**.
 
-Em todas essas estruturas, os elementos são dispostos em uma sequência estrita: cada item possui apenas **um sucessor** e **um antecessor** (com exceção do primeiro e do último). Essa organização funciona maravilhosamente bem para processar tarefas em fila, manter um histórico sequencial de ações ou armazenar uma lista simples de contatos.
+> 💡 **Novo por aqui ou sente que o salto de listas para árvores é muito grande?**  
+> Recomendamos fortemente a leitura prévia do nosso artigo de ponte didática: [De Listas a Árvores: O Elo Perdido das Estruturas de Dados]({{< ref "de-listas-a-arvores-o-elo-perdido-das-estruturas-de-dados.md" >}}), onde explicamos a transição do pensamento linear para o hierárquico, grafos, recursão estrutural e *backtracking*.
+
+Em todas essas estruturas lineares, os elementos são dispostos em uma sequência estrita: cada item possui apenas **um sucessor** e **um antecessor** (com exceção do primeiro e do último). Essa organização funciona maravilhosamente bem para processar tarefas em fila, manter um histórico sequencial de ações ou armazenar uma lista simples de contatos.
 
 No entanto, à medida que construímos sistemas mais complexos, nos deparamos com problemas onde os dados **não possuem uma relação sequencial**, mas sim uma **relação hierárquica** ou de **ramificação múltiplos caminhos**. 
 
