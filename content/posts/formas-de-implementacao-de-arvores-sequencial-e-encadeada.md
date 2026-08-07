@@ -1,6 +1,6 @@
 ---
 title: "Formas de Implementação de Árvores: Sequencial (Vetor) vs. Encadeada (Nós e Ponteiros)"
-date: 2026-08-06T22:55:00-03:00
+date: 2026-08-06T22:00:00-03:00
 description: "Aprenda como as árvores são representadas na memória do computador. Entenda de forma simples e visual a implementação sequencial (arrays) e a encadeada (ponteiros/nós)."
 categories: ["Estruturas de Dados", "Algoritmos"]
 tags: ["Árvores", "Estruturas de Dados", "Python", "Algoritmos", "Memória", "Iniciantes"]
