@@ -7,7 +7,7 @@ tags: ["Teoria dos Conjuntos", "Matemática", "Algoritmos", "Python", "SQL", "Ac
 draft: false
 ---
 
-No nosso artigo anterior — {{< ref "introducao-a-teoria-dos-conjuntos.md" >}} —, descobrimos que conjuntos nada mais são do que coleções bem definidas de elementos. Aprendemos como verificar se um item pertence ($\in$) a um conjunto ou se um grupo é subconjunto ($\subset$) de outro.
+No nosso artigo anterior — [Teoria dos Conjuntos Descomplicada: Do Conceito ao Código]({{< ref "introducao-a-teoria-dos-conjuntos.md" >}}) —, descobrimos que conjuntos nada mais são do que coleções bem definidas de elementos. Aprendemos como verificar se um item pertence ($\in$) a um conjunto ou se um grupo é subconjunto ($\subset$) de outro.
 
 Mas a verdadeira mágica acontece quando começamos a **combinar, comparar e extrair partes** desses conjuntos!
 
@@ -152,9 +152,15 @@ SELECT email FROM clientes_2026;
 
 ---
 
-## Conclusão
+## Conclusão e Próximos Passos
 
 Viu como as operações de União, Intersecção e Diferença da Teoria dos Conjuntos são exatamente as mesmas ferramentas que usamos ao filtrar dados, escrever consultas SQL e manipular estruturas de dados no código?
+
+Se você quer aprofundar seus conhecimentos em Matemática e Estruturas de Dados, confira nossos outros artigos recomendados aqui no blog:
+
+* [Teoria dos Conjuntos Descomplicada: Do Conceito ao Código]({{< ref "introducao-a-teoria-dos-conjuntos.md" >}})
+* [Busca Linear, Busca Binária e Complexidade Big-O]({{< ref "busca-linear-e-complexidade-big-o.md" >}})
+* [Lista Linear Sequencial (Arrays e Vetores): Guia Completo]({{< ref "lista-linear-sequencial-arrays-e-vetores.md" >}})
 
 No próximo post da nossa série, vamos avançar para as famosas **Leis de De Morgan** e mostrar como a álgebra de conjuntos nos ajuda a refatorar blocos de código com condicionais `if/else` gigantescas de forma elegante e segura.
 
