@@ -29,6 +29,9 @@
 {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
+<!-- KaTeX CSS for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+
 <!-- Scripts -->
 <script>
   window.siteBaseUrl = "{{ "" | relURL }}";

@@ -19,6 +19,12 @@ theme = [] # Using custom layouts directly at root
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true # Allow HTML in markdown
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          inline = [['$', '$'], ['\\(', '\\)']]
+          block = [['$$', '$$'], ['\\[', '\\]']]
   [markup.highlight]
     codeFences = true
     guessSyntax = true

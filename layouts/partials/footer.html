@@ -46,3 +46,60 @@
     <polyline points="5 12 12 5 19 12"></polyline>
   </svg>
 </button>
+
+<!-- KaTeX Auto-Render JS + Accessibility Enhancements -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+    onload="
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError: false
+      });
+      
+      setTimeout(function() {
+        var convertLatexToPtBrSpeech = function(latex) {
+          var text = latex;
+          text = text.replace(/\\in/g, ' pertence a ');
+          text = text.replace(/\\notin/g, ' não pertence a ');
+          text = text.replace(/\\subset/g, ' é subconjunto de ');
+          text = text.replace(/\\supset/g, ' contém ');
+          text = text.replace(/\\emptyset/g, ' conjunto vazio ');
+          text = text.replace(/\\text\{([^}]+)\}/g, '$1');
+          text = text.replace(/\\le|\\leq/g, ' menor ou igual a ');
+          text = text.replace(/\\ge|\\geq/g, ' maior ou igual a ');
+          text = text.replace(/\\neq/g, ' diferente de ');
+          text = text.replace(/\\forall/g, ' para todo ');
+          text = text.replace(/\\exists/g, ' existe ');
+          text = text.replace(/\\sum/g, ' somatório ');
+          text = text.replace(/\\infty/g, ' infinito ');
+          text = text.replace(/\\\{/g, ' conjunto ');
+          text = text.replace(/\\\}/g, '');
+          text = text.replace(/\\log_2\(([^)]+)\)/g, 'logaritmo na base 2 de $1');
+          text = text.replace(/\\log/g, 'logaritmo');
+          text = text.replace(/2\^\{10\}/g, '2 elevado a 10');
+          text = text.replace(/\^\{([^}]+)\}/g, ' elevado a $1');
+          text = text.replace(/\^([0-9a-zA-Z])/g, ' elevado a $1');
+          text = text.replace(/_\{([^}]+)\}/g, ' sub $1');
+          text = text.replace(/_([0-9a-zA-Z])/g, ' sub $1');
+          text = text.replace(/\\/g, '');
+          text = text.replace(/[{}]/g, ' ');
+          text = text.replace(/\s+/g, ' ').trim();
+          return text;
+        };
+
+        document.querySelectorAll('.katex').forEach(function(el) {
+          var annotation = el.querySelector('annotation[encoding=\'application/x-tex\']');
+          if (annotation && annotation.textContent) {
+            var rawLatex = annotation.textContent;
+            var spokenText = convertLatexToPtBrSpeech(rawLatex);
+            el.setAttribute('role', 'math');
+            el.setAttribute('aria-label', spokenText);
+          }
+        });
+      }, 50);
+    "></script>
