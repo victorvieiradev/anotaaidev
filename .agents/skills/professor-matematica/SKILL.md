@@ -127,3 +127,18 @@ Ao concluir a criação de qualquer post de matemática:
   - **Diagrama de Venn**: Círculos sobrepostos dentro de retângulo universo, detalhados narrativamente para leitores de tela.
 - **Integração Prática**: Tipo nativo `set` em Python com a palavra-chave `in` e `not in`.
 
+### 📌 2. Teoria dos Conjuntos (Operações com Conjuntos: União, Intersecção e Diferença)
+- **Artigo Publicado**: [`content/posts/operacoes-com-conjuntos-uniao-interseccao-diferenca.md`](file:///C:/Users/Paty/Desktop/site/content/posts/operacoes-com-conjuntos-uniao-interseccao-diferenca.md)
+- **Livros e Autores de Referência**:
+  - *Paul R. Halmos*: *Naive Set Theory* (*Teoria Naive dos Conjuntos*).
+  - *Seymour Lipschutz*: *Teoria dos Conjuntos (Coleção Schaum)*.
+  - *Elon Lages Lima*: *Meu Professor de Matemática* (IMPA).
+  - *Georg Cantor*: *Beiträge zur Begründung der transfiniten Mengenlehre* (1895).
+- **Símbolos com Descrição Acessível Mapeados**:
+  - **União ($\cup$)**: Formato visual de 'U' maiúsculo bem arredondado e aberto para cima. Leitura: "união dos conjuntos".
+  - **Intersecção ($\cap$)**: Formato visual de 'U' invertido parecendo uma ponte ou letra 'n' arredondada. Leitura: "intersecção dos conjuntos".
+  - **Diferença ($\setminus$ ou $-$)**: Formato visual de barra diagonal invertida inclinada da esquerda para a direita. Leitura: "diferença entre conjuntos / A menos B".
+  - **Complementar ($A^c$ ou $A'$)**: Formato visual de letra 'c' maiúscula sobrescrita. Leitura: "complementar do conjunto A".
+  - **Diagrama de Venn das Operações**: Diagramas preenchidos detalhados narrativamente para leitores de tela (união total, lente de sobreposição central e lua crescente lateral).
+- **Integração Prática**: Operadores `|`, `&`, `-`, `^` e métodos `.union()`, `.intersection()`, `.difference()` na classe `set` do Python, além de `UNION`, `INTERSECT` e `EXCEPT` em SQL.
+
